@@ -4,7 +4,10 @@ from django.conf.urls.defaults import *
 # from django.contrib import admin
 # admin.autodiscover()
 
-urlpatterns = patterns('',
+urlpatterns = patterns('django.views.generic.simple',
+                       (r'^$', 'direct_to_template', {'template': 'index.html'}),)
+
+urlpatterns += patterns('',
     # Example:
     # (r'^zchome/', include('zchome.foo.urls')),
 
