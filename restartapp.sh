@@ -1,6 +1,6 @@
 #!/bin/bash
 
-PIDFILE="/home/zchome/zchome.pid"
+PIDFILE="/home/zhangchide/zc.pid"
 
 if [ -f $PIDFILE ]; then
     kill `cat -- $PIDFILE`
