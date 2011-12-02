@@ -100,6 +100,20 @@ INSTALLED_APPS = (
     # 'django.contrib.admindocs',
 )
 
+MY_APPS = (
+    'fun',
+    )
+
+INSTALLED_APPS += MY_APPS
+
+app_template_dirs = []
+for app_dir in MY_APPS:
+    template_dir = os.path.join(app_dir, 'templates')
+    if os.path.isdir(template_dir):
+        app_template_dirs.append(template_dir)
+
+TEMPLATE_DIRS += tuple(app_template_dirs)
+
 try:
     from local_settings import *
 except ImportError:
