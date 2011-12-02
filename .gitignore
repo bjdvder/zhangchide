@@ -2,3 +2,4 @@ local_settings.py
 *.pyc
 *.pid
 logs/
+.DS_Store

@@ -8,6 +8,7 @@ from django.conf import settings
 urlpatterns = patterns('',
                        (r'^$', 'start.views.index'),
                        (r'^works/$', 'start.views.works'),
+                       (r'^fun/', include('fun.urls')),
     # Example:
     # (r'^zchome/', include('zchome.foo.urls')),
 
@@ -20,11 +21,11 @@ urlpatterns = patterns('',
 
 if settings.LOCAL_DEV:
     urlpatterns += patterns(
-        '',
-        # (r'^favicon\.ico$', 'django.views.generic.simple.redirect_to', {'url': '/img/favicon.ico'}),
-        # (r'^js/(.*)$', 'django.views.static.serve', {'document_root':'./public/js'}),
-        # (r'^css/(.*)$', 'django.views.static.serve', {'document_root':'./public/css'}),
-        # (r'^img/(.*)$', 'django.views.static.serve', {'document_root':'./public/img'}),
+        'django.views',
+        (r'^favicon\.ico$', 'generic.simple.redirect_to', {'url': '/img/favicon.ico'}),
+        (r'^img/(.*)$', 'static.serve', {'document_root': './public/img'}),
+        (r'^js/(.*)$', 'static.serve', {'document_root': './public/js'}),
+        (r'^css/(.*)$', 'static.serve', {'document_root': './public/css'}),
         )
 
-handler404 = 'start.views.not_found'
+# handler404 = 'start.views.not_found'
