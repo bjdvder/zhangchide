@@ -2,6 +2,7 @@
 
 DEBUG = False
 TEMPLATE_DEBUG = DEBUG
+LOCAL_DEV = False
 
 ADMINS = (
     # ('Your Name', 'your_email@domain.com'),
