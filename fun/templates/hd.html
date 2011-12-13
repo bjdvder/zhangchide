@@ -6,19 +6,38 @@
     <script type="text/javascript" src="/js/jquery-1.7.1.min.js"></script>
     <script type="text/javascript" src="/js/hd.js"></script>
     <style type="text/css">
-      ul { list-style: none }
+      html, body { margin: 0; padding: 0 }
+      ul, li { list-style: none; margin: 0; padding: 0 }
+      #views { width: 520px; margin: 0 auto 40px auto; background: white; -moz-box-shadow: rgba(0, 0, 0, 0.2) 0 2px 6px 0; -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0 2px 6px 0; -o-box-shadow: rgba(0, 0, 0, 0.2) 0 2px 6px 0; box-shadow: rgba(0, 0, 0, 0.2) 0 2px 6px 0; -moz-border-radius: 0 0 5px 5px; -o-border-radius: 0 0 5px 5px; -webkit-border-radius: 0 0 5px 5px; border-radius: 0 0 5px 5px }
+      #tasks { padding: 20px }
+      #tasks h1 { font-size: 36px; font-weight: bold; text-align: center; padding: 0 0 10px 0 }
+      #tasks input[type="text"] { width: 466px; font-size: 24px; font-family: inherit; line-height: 1.4em; border: 0; outline: none; padding: 6px; border: 1px solid #999; -moz-box-shadow: rgba(0, 0, 0, 0.2) 0 1px 2px 0 inset; -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0 1px 2px 0 inset; -o-box-shadow: rgba(0, 0, 0, 0.2) 0 1px 2px 0 inset; box-shadow: rgba(0, 0, 0, 0.2) 0 1px 2px 0 inset }
+      #tasks .item { padding: 15px 20px 15px 0; position: relative; font-size: 24px; border-bottom: 1px solid #CCC }
+      #tasks .item label { margin-left: 10px }
+      #tasks .item .delete { position: absolute; right: 10px; top: 16px; cursor: pointer; width: 20px; height: 20px }
+      #tasks .item .edit { display: none; }
+      #tasks .item.done label { color: #777; text-decoration: line-through }
     </style>
 </head>
 <body>
-  happy list
-  <form id="add-form">
-    <input id="add-text" type="text" />
-    <input id="add-btn" type="submit" />
-  </form>
-  <ul id="todo-list">
-    <li><input type="checkbox" /><label>title</label><a href="#">X</a></li>
-  </ul>
-  <script type="text/javascript">
-  </script>
+  <div id="views">
+    <div id="tasks">
+      <h1>Todos</h1>
+      <form id="add-form">
+        <input id="add-text" type="text" placeholder="What needs to be done?"/>
+      </form>
+      <div id="mark-all-done">
+        <label><input type="checkbox"><span>Complete all</span></label>
+      </div>
+      <ul id="todo-list">
+        <li id="blank-li" class="item" style="display:none;">
+          <input type="checkbox" />
+          <label>title</label>
+          <a class="delete" href="#">X</a>
+          <div class="edit"><input type="text" /></div>
+        </li>
+      </ul>
+    </div>
+  </div>
 </body>
 </html>
