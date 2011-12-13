@@ -11,3 +11,6 @@ def dart_sunflower(request):
 
 def dart_slider(request):
     return render_to_response('dart_slider.html', {})
+
+def hd(request):
+    return render_to_response('hd.html', {})
