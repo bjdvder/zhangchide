@@ -1,6 +1,6 @@
 # Django settings for zchome project.
 
-DEBUG = False
+DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 LOCAL_DEV = False
 
@@ -109,6 +109,7 @@ INSTALLED_APPS += MY_APPS
 
 app_template_dirs = []
 for app_dir in MY_APPS:
+    app_dir = os.path.join(dirname, app_dir)
     template_dir = os.path.join(app_dir, 'templates')
     if os.path.isdir(template_dir):
         app_template_dirs.append(template_dir)
