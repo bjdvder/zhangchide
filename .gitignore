@@ -1,5 +1,6 @@
 *.pyc
 *.pid
+*.swp
 logs/
 .DS_Store
 local_settings.py
