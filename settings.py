@@ -114,7 +114,7 @@ for app_dir in MY_APPS:
     if os.path.isdir(template_dir):
         app_template_dirs.append(template_dir)
 
-TEMPLATE_DIRS += tuple(app_template_dirs)
+TEMPLATE_DIRS = tuple(app_template_dirs) + TEMPLATE_DIRS
 
 try:
     from local_settings import *
