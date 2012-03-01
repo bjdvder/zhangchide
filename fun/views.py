@@ -18,3 +18,6 @@ def dart_slider(request):
 def hd(request):
     """happy day work"""
     return render_to_response('fun/hd.html', {})
+
+def har_view(request):
+    return render_to_response('fun/har_view.html', {})
