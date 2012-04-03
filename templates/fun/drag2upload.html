@@ -1,0 +1,18 @@
+<html>
+  <head>
+    <title>Drag file to upload</title>
+    <script type="text/javascript" src="/js/libs/jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="/js/drag2upload.js"></script>
+    <link rel="stylesheet" href="/css/libs/jquery-ui.css">
+    <link rel="stylesheet" href="/css/libs/bootstrap.min.css">
+  </head>
+  <body>
+    <form method="POST" action="/fun/j_upload/" enctype="multipart/form-data">
+      <input type="hidden" id="csrfmiddlewaretoken" name="csrfmiddlewaretoken" value="${csrf_token}"/>
+      <img alt=""/>
+      <div style="display:none;">
+        <input type="file" name="picfile" id="picfile" style="margin: 15px 0;">
+      </div>
+    </form>
+  </body>
+</html>
