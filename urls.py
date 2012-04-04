@@ -9,6 +9,7 @@ urlpatterns = patterns('',
                        (r'^$', 'start.views.index'),
                        (r'^works/$', 'start.views.works'),
                        (r'^fun/', include('fun.urls')),
+                       (r'^pinboxapp/', 'pinboxapp.views.index'),
     # Example:
     # (r'^zchome/', include('zchome.foo.urls')),
 
