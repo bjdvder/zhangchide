@@ -22,7 +22,7 @@
       .mcol { width:410px; padding:0px 200px; }
       #gallery { width:245px; height:368px; position:absolute; top:170px; left:283px; overflow:hidden; background-color:#000; }
       #gallery .slider { width:1225px; height:366px; position:relative; left:0; }
-      #gallery .photo { width:245px; padding:0; margin:0; float:left; }
+      #gallery .photo { width:245px; padding:0; margin:20px 0 0; float:left; }
       #gallery .photo img { width:245px; }
     </style>
     <script type="text/javascript" src="/js/libs/jquery-1.7.1.min.js"></script>
@@ -47,11 +47,17 @@
       <div class="feature" id="unread">
         <div class="content">
           <h3>Read it later</h3>
-          You can mark the article as unread in Pinboard, then read it on the go!
+          The articles marked as unread in Pinboard are here, read it on the go!
         </div>
       </div>
     </div>
     <div class="rcol">
+      <div class="feature" id="manage">
+        <div class="content">
+          <h3>Manage bookmark</h3>
+          Full featured to Pinboard, manage your bookmarks and sync back to your account.
+        </div>
+      </div>
       <div class="feature" id="tags">
         <div class="content">
           <h3>Tags</h3>
@@ -64,30 +70,24 @@
           Browse and read the bookmark in Pinbox is the same as in Safari.
         </div>
       </div>
-      <div class="feature" id="readability">
-        <div class="content">
-          <h3>Readability</h3>
-          Why not read the article in a elegant way? Readability integeration is for your easy reading.
-        </div>
-      </div>
     </div>
     <div class="mcol">
       <div id="gallery">
         <div class="slider">
           <div class="photo" id="photo-bookmarks">
-            <img src="/img/pinboxapp/bookmarks.png" />
+            <img src="/img/pinboxapp/screenshot-bookmarks.png" />
           </div>
           <div class="photo" id="photo-unread">
-            <img src="/img/pinboxapp/unread.png" />
+            <img src="/img/pinboxapp/screenshot-unread.png" />
+          </div>
+          <div class="photo" id="photo-manage">
+            <img src="/img/pinboxapp/screenshot-manage.png" />
           </div>
           <div class="photo" id="photo-tags">
-            <img src="/img/pinboxapp/tags.png" />
+            <img src="/img/pinboxapp/screenshot-tags.png" />
           </div>
           <div class="photo" id="photo-webview">
-            <img src="/img/pinboxapp/webview.png" />
-          </div>
-          <div class="photo" id="photo-readability">
-            <img src="/img/pinboxapp/readability.png" />
+            <img src="/img/pinboxapp/screenshot-webview.png" />
           </div>
         </div>
       </div>
@@ -101,7 +101,6 @@
       </a>
     </div>
     <p>Contact: <a href="https://twitter.com/#!/getpinbox" target="_blank">@getpinbox</a> on twitter</p>
-    <p>Thanks <a href="http://glyphicons.com/" target="_blank">GLYPHICONS</a> for the tab icons.</p>
   </div>
   <script type="text/javascript">
   </script>
